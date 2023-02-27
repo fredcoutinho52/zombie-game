@@ -9,12 +9,9 @@ public class ControleInimigo : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        
-    }
-
-    // Update is called once per frame
-    void Update() {
-        
+        Jogador = GameObject.FindWithTag("Jogador");
+        int geraTipoZumbi = Random.Range(1, 28);
+        transform.GetChild(geraTipoZumbi).gameObject.SetActive(true);
     }
 
     void FixedUpdate() {
